@@ -16,7 +16,7 @@ jobs:
         with:
           switches: -avz --delete --exclude='.git*' --exclude='.github'
           path: ./
-          remote_path: /home/archive/static-site/
+          remote_path: /home/archive/univerid.ru/
           remote_host: 85.143.101.97
           remote_user: archive
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -28,5 +28,5 @@ jobs:
           username: archive
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/archive/static-site
+            cd /home/archive/univerid.ru
             docker compose up -d
