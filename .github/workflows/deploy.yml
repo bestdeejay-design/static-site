@@ -14,7 +14,7 @@ jobs:
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.2
         with:
-          switches: -avz --delete --exclude='.git*' --exclude='.github'
+          switches: -avz --delete --exclude='.git*' --exclude='.github' --exclude='.env'
           path: ./
           remote_path: /home/archive/univerid.ru/
           remote_host: 85.143.101.97
